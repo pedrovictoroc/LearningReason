@@ -84,3 +84,22 @@
     1. while (condition) {...}
     2. for (i in 0 to 9 ) {...}
     3. for (i in 9 downto to 0) {...}
+
+# Modulos
+
+    Modulos são uma forma de agrupar tipos e valores. Cada arquivo .re cria um módulo com o mesmo nome. Cada 'type' e 'value' ligado a um módulo automaticamente se torna um "membro" deste módulo, que pode ser acessado por outros módulos. Módulos podem ser aninhados usando a keyword "module"
+
+        // Criação
+        1. module Foo = { let bar = 10; }
+
+        // Acesso
+        2. Foo.bar;
+
+        // Tipagem
+        3. module type Foo = { let bar: int; }
+
+# Functores
+
+    Functores são como funções que criam módulos. Isso é um tópico avançado, mas que é muito poderoso. Se quiser um exemplo, veja [https://reasonml.github.io/docs/en/overview#functors] ou o arquivo overview neste repositório
+
+    
